@@ -1,50 +1,59 @@
-# React + TypeScript + Vite
+# Frontend Practice Components
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Repository นี้เป็นส่วนหนึ่งของการฝึกฝนการพัฒนา Frontend Components โดยประกอบไปด้วยตัวอย่างการสร้าง Components ต่างๆ เพื่อเป็นแนวทางในการเรียนรู้และพัฒนาทักษะ
 
-Currently, two official plugins are available:
+## Components List
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 1. Dock Component
 
-## Expanding the ESLint configuration
+Dock Component เป็นการจำลอง dock bar แบบ macOS โดยมีคุณสมบัติดังนี้:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- แสดงไอคอนแอพพลิเคชันในรูปแบบ dock
+- มี animation เมื่อ hover ที่ไอคอน (zoom effect)
+- รองรับการคลิกเพื่อเปิดใช้งานแอพพลิเคชัน
+- สามารถปรับแต่งขนาดและตำแหน่งของ dock ได้
 
-- Configure the top-level `parserOptions` property like this:
+### 2. Carousel Icon
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+Carousel Icon เป็น component สำหรับแสดงรูปภาพหรือไอคอนแบบหมุนเวียน:
+
+- แสดงไอคอนหรือรูปภาพแบบ slideshow
+- มีปุ่มควบคุมสำหรับเลื่อนไปข้างหน้าและถอยหลัง
+- รองรับการแสดงผลแบบ auto-play
+- สามารถกำหนดระยะเวลาในการเปลี่ยนรูปได้
+- รองรับการแสดงผลบนอุปกรณ์ขนาดต่างๆ (responsive)
+
+### 3. Chart
+
+Chart Component สำหรับแสดงข้อมูลในรูปแบบกราฟต่างๆ:
+
+- รองรับการแสดงผลกราฟหลายรูปแบบ (Line, Bar, Pie chart)
+- สามารถปรับแต่งสี และรูปแบบการแสดงผลได้
+- มี tooltip สำหรับแสดงข้อมูลเพิ่มเติม
+- รองรับการอัพเดทข้อมูลแบบ real-time
+- สามารถ export เป็นรูปภาพได้
+
+## การติดตั้งและการใช้งาน
+
+1. Clone repository:
+
+```bash
+git clone https://github.com/Mui2108/my-free-time.git
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+2. ติดตั้ง dependencies:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+pnpm install
 ```
+
+3. รันโปรเจค:
+
+```bash
+pnpm dev
+```
+
+## เทคโนโลยีที่ใช้
+
+- React.js
+- Tailwind CSS
